@@ -160,6 +160,863 @@
     .auth-switch-btn:hover {
       text-decoration: underline;
     }
+    /* Main App */
+    .main-container {
+      min-height: 100vh;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .header-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .icon-btn {
+      padding: 0.5rem;
+      border-radius: 50%;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .icon-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: rotate(90deg);
+    }
+    .icon-btn:active {
+      transform: scale(0.95);
+    }
+    .search-bar {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      color: #fff;
+      outline: none;
+      border: none;
+      transition: all 0.3s;
+    }
+    .search-input:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .chats-list {
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: 5rem;
+    }
+    .chat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .chat-item:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translateX(0.25rem);
+    }
+    .chat-item:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .chat-avatar {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s;
+    }
+    .chat-avatar:hover {
+      transform: scale(1.1);
+    }
+    .chat-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+    }
+    .chat-username {
+      font-weight: 600;
+    }
+    .chat-time {
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+    .chat-last-message {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .unread-badge {
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #fff;
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+    /* Settings */
+    .settings-container {
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: 5rem;
+    }
+    .profile-section {
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .profile-avatar {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.5s;
+    }
+    .profile-avatar:hover {
+      transform: scale(1.1) rotate(6deg);
+    }
+    .profile-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .settings-section {
+      padding: 1rem;
+    }
+    .section-title {
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      padding-left: 0.5rem;
+    }
+    .settings-item {
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      margin-bottom: 0.25rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .settings-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(0.25rem);
+    }
+    .settings-item:active {
+      transform: scale(0.98);
+    }
+    .settings-label {
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+    .settings-value {
+      font-weight: 500;
+    }
+    /* Bottom Navigation */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0.75rem 1rem;
+      max-width: 28rem;
+      margin: 0 auto;
+    }
+    .nav-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 9999px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .nav-btn:active {
+      transform: scale(0.95);
+    }
+    .nav-btn.active {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
+    }
+    .nav-btn:hover:not(.active) {
+      transform: scale(1.05);
+    }
+    .nav-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      transition: all 0.3s;
+    }
+    .nav-icon.active {
+      color: #fff;
+    }
+    .nav-icon.inactive {
+      color: #9ca3af;
+    }
+    .nav-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    .nav-label.active {
+      color: #fff;
+    }
+    .nav-label.inactive {
+      color: #9ca3af;
+    }
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: #9ca3af;
+    }
+    /* Animations */
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+    @keyframes slide-down {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slide-in-left {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes bounce-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out;
+    }
+    .animate-shake {
+      animation: shake 0.4s ease-in-out;
+    }
+    .animate-slide-down {
+      animation: slide-down 0.3s ease-out;
+    }
+    .animate-bounce-subtle {
+      animation: bounce-subtle 2s infinite;
+    }
+    .opacity-0 {
+      opacity: 0;
+    }
+    .opacity-100 {
+      opacity: 1;
+    }
+    .scale-95 {
+      transform: scale(0.95);
+    }
+    .scale-100 {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+  
+    // Конфигурация Firebase для XenMessenger
+    const firebaseConfig = {
+      apiKey: "AIzaSyC8zwOfm5qyF_r2A1TTGCNb7pQyoaEe56w",
+      authDomain: "xenmessenger.firebaseapp.com",
+      projectId: "xenmessenger",
+      storageBucket: "xenmessenger.firebasestorage.app",
+      messagingSenderId: "912355915340",
+      appId: "1:912355915340:web:bd0d783cba08883c2d66e9",
+      measurementId: "G-2BXDQJJWVW",
+      databaseURL: "https://xenmessenger-default-rtdb.firebaseio.com"
+    };
+  
+    // Инициализация Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    const db = firebase.firestore();
+    const realtimeDb = firebase.database();
+  
+    // Иконки
+    const SearchIcon = ({ className = '' }) => (
+      React.createElement('svg', {
+        xmlns: 'http://www.w3.org/2000/svg',
+        width: 24,
+        height: 24,
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: 2,
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round',
+        className
+      },
+        React.createElement('circle', { cx: 11, cy: 11, r: 8 }),
+        React.createElement('path', { d: 'm21 21-4.3-4.3' })
+      )
+    );
+  
+    const MessageCircleIcon = ({ className = '' }) => (
+      React.createElement('svg', {
+        xmlns: 'http://www.w3.org/2000/svg',
+        width: 24,
+        height: 24,
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: 2,
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round',
+        className
+      },
+        React.createElement('path', { d: 'M7.9 20A9 9 0 1 0 4 16.1L2 22Z' })
+      )
+    );
+  
+    const SettingsIcon = ({ className = '' }) => (
+      React.createElement('svg', {
+        xmlns: 'http://www.w3.org/2000/svg',
+        width: 24,
+        height: 24,
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: 2,
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round',
+        className
+      },
+        React.createElement('path', { d: 'M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z' }),
+        React.createElement('circle', { cx: 12, cy: 12, r: 3 })
+      )
+    );
+  
+    const AlertCircleIcon = ({ className = '' }) => (
+      React.createElement('svg', {
+        xmlns: 'http://www.w3.org/2000/svg',
+        width: 24,
+        height: 24,
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: 2,
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round',
+        className
+      },
+        React.createElement('circle', { cx: 12, cy: 12, r: 10 }),
+        React.createElement('line', { x1: 12, y1: 8, x2: 12, y2: 12 }),
+        React.createElement('line', { x1: 12, y1: 16, x2: 12.01, y2: 16 })
+      )
+    );
+  
+    function ModernMessenger() {
+      const [currentScreen, setCurrentScreen] = useState('login');
+      const [activeTab, setActiveTab] = useState('chats');
+      const [isRegistering, setIsRegistering] = useState(false);
+      const [screenTransition, setScreenTransition] = useState(false);
+      const [loginData, setLoginData] = useState({ username: '', password: '' });
+      const [registerData, setRegisterData] = useState({ email: '', username: '', password: '' });
+      const [error, setError] = useState('');
+      const [user, setUser] = useState(null);
+      const [searchActive, setSearchActive] = useState(false);
+      const [chats, setChats] = useState([]);
+      const [loading, setLoading] = useState(false);
+  
+      // Загрузка чатов из Firebase Realtime Database
+      useEffect(() => {
+        if (user) {
+          const chatsRef = realtimeDb.ref('chats');
+          chatsRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+              const chatsArray = Object.keys(data).map(key => ({
+                id: key,
+                ...data[key]
+              }));
+              setChats(chatsArray);
+            } else {
+              setChats([]);
+            }
+          });
+  
+          return () => chatsRef.off();
+        }
+      }, [user]);
+  
+      const validateUsername = (username) => {
+        const cleanUsername = username.replace('@', '');
+        const regex = /^[a-zA-Z0-9]{4,24}$/;
+        return regex.test(cleanUsername);
+      };
+  
+      // Вход с Firebase Firestore
+      const handleLogin = async () => {
+        setError('');
+        setLoading(true);
+        const cleanUsername = loginData.username.replace('@', '');
+        
+        if (!loginData.username || !loginData.password) {
+          setError('Please fill in all fields');
+          setLoading(false);
+          return;
+        }
+  
+        if (!validateUsername(cleanUsername)) {
+          setError('Invalid username format');
+          setLoading(false);
+          return;
+        }
+  
+        try {
+          const usersRef = db.collection('users');
+          const snapshot = await usersRef.where('username', '==', cleanUsername.toLowerCase()).get();
+          
+          if (snapshot.empty) {
+            setError('Account does not exist');
+            setLoading(false);
+            return;
+          }
+  
+          const userData = snapshot.docs[0].data();
+          
+          if (userData.password !== loginData.password) {
+            setError('Wrong password');
+            setLoading(false);
+            return;
+          }
+  
+          setUser({
+            id: snapshot.docs[0].id,
+            username: userData.username,
+            email: userData.email,
+            avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.username}`
+          });
+          
+          setScreenTransition(true);
+          setTimeout(() => {
+            setCurrentScreen('main');
+            setScreenTransition(false);
+            setLoading(false);
+          }, 300);
+        } catch (err) {
+          setError('Login error: ' + err.message);
+          setLoading(false);
+        }
+      };
+  
+      // Регистрация с Firebase Firestore
+      const handleRegister = async () => {
+        setError('');
+        setLoading(true);
+        const cleanUsername = registerData.username.replace('@', '');
+        
+        if (!registerData.email || !registerData.username || !registerData.password) {
+          setError('Please fill in all fields');
+          setLoading(false);
+          return;
+        }
+  
+        if (!validateUsername(cleanUsername)) {
+          setError('Username must be 4-24 characters (letters and numbers only)');
+          setLoading(false);
+          return;
+        }
+  
+        try {
+          const usersRef = db.collection('users');
+          const snapshot = await usersRef.where('username', '==', cleanUsername.toLowerCase()).get();
+          
+          if (!snapshot.empty) {
+            setError('Username already taken');
+            setLoading(false);
+            return;
+          }
+  
+          const newUserData = {
+            email: registerData.email,
+            username: cleanUsername.toLowerCase(),
+            password: registerData.password,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          };
+  
+          const docRef = await usersRef.add(newUserData);
+  
+          setUser({
+            id: docRef.id,
+            username: cleanUsername,
+            email: registerData.email,
+            avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${cleanUsername}`
+          });
+          
+          setScreenTransition(true);
+          setTimeout(() => {
+            setCurrentScreen('main');
+            setScreenTransition(false);
+            setLoading(false);
+          }, 300);
+        } catch (err) {
+          setError('Registration error: ' + err.message);
+          setLoading(false);
+        }
+      };
+  
+      const switchAuthMode = () => {
+        setError('');
+        setScreenTransition(true);
+        setTimeout(() => {
+          setIsRegistering(!isRegistering);
+          setScreenTransition(false);
+        }, 200);
+      };
+  
+      if (currentScreen === 'login') {
+        return React.createElement('div', { className: 'login-container' },
+          React.createElement('div', {
+            className: `login-box ${screenTransition ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`
+          },
+            React.createElement('div', { className: 'login-header animate-fade-in' },
+              React.createElement('div', { className: 'logo-circle' },
+                React.createElement(MessageCircleIcon, { className: 'logo-icon' })
+              ),
+              React.createElement('h1', { className: 'login-title' }, 'XenMessenger'),
+              React.createElement('p', { className: 'login-subtitle' }, 'Connect with everyone')
+            ),
+  
+            error && React.createElement('div', { className: 'error-box animate-shake' },
+              React.createElement(AlertCircleIcon, { className: 'error-icon' }),
+              React.createElement('p', { className: 'error-text' }, error)
+            ),
+  
+            !isRegistering
+              ? React.createElement('div', null,
+                  React.createElement('input', {
+                    type: 'text',
+                    placeholder: '@username',
+                    value: loginData.username,
+                    onChange: (e) => {
+                      setError('');
+                      setLoginData({...loginData, username: e.target.value});
+                    },
+                    onKeyPress: (e) => e.key === 'Enter' && handleLogin(),
+                    className: 'input-field',
+                    disabled: loading
+                  }),
+                  React.createElement('input', {
+                    type: 'password',
+                    placeholder: 'Password',
+                    value: loginData.password,
+                    onChange: (e) => {
+                      setError('');
+                      setLoginData({...loginData, password: e.target.value});
+                    },
+                    onKeyPress: (e) => e.key === 'Enter' && handleLogin(),
+                    className: 'input-field',
+                    disabled: loading
+                  }),
+                  React.createElement('button', {
+                    onClick: handleLogin,
+                    className: 'btn-primary',
+                    disabled: loading
+                  }, loading ? 'Loading...' : 'Log In'),
+                  React.createElement('div', { className: 'auth-switch' },
+                    React.createElement('span', { className: 'auth-switch-text' }, "Don't have an account? "),
+                    React.createElement('button', {
+                      onClick: switchAuthMode,
+                      className: 'auth-switch-btn',
+                      disabled: loading
+                    }, 'Register')
+                  )
+                )
+              : React.createElement('div', null,
+                  React.createElement('input', {
+                    type: 'email',
+                    placeholder: 'Email',
+                    value: registerData.email,
+                    onChange: (e) => {
+                      setError('');
+                      setRegisterData({...registerData, email: e.target.value});
+                    },
+                    onKeyPress: (e) => e.key === 'Enter' && handleRegister(),
+                    className: 'input-field',
+                    disabled: loading
+                  }),
+                  React.createElement('input', {
+                    type: 'text',
+                    placeholder: '@username (4-24 characters)',
+                    value: registerData.username,
+                    onChange: (e) => {
+                      setError('');
+                      const value = e.target.value.replace(/[^a-zA-Z0-9@]/g, '');
+                      if (value.length <= 25) {
+                        setRegisterData({...registerData, username: value});
+                      }
+                    },
+                    onKeyPress: (e) => e.key === 'Enter' && handleRegister(),
+                    className: 'input-field',
+                    disabled: loading
+                  }),
+                  React.createElement('input', {
+                    type: 'password',
+                    placeholder: 'Password',
+                    value: registerData.password,
+                    onChange: (e) => {
+                      setError('');
+                      setRegisterData({...registerData, password: e.target.value});
+                    },
+                    onKeyPress: (e) => e.key === 'Enter' && handleRegister(),
+                    className: 'input-field',
+                    disabled: loading
+                  }),
+                  React.createElement('button', {
+                    onClick: handleRegister,
+                    className: 'btn-primary',
+                    disabled: loading
+                  }, loading ? 'Loading...' : 'Register'),
+                  React.createElement('div', { className: 'auth-switch' },
+                    React.createElement('span', { className: 'auth-switch-text' }, 'Already have an account? '),
+                    React.createElement('button', {
+                      onClick: switchAuthMode,
+                      className: 'auth-switch-btn',
+                      disabled: loading
+                    }, 'Log In')
+                  )
+                )
+          )
+        );
+      }
+  
+      return React.createElement('div', { className: 'main-container' },
+        activeTab === 'chats' && React.createElement('div', { className: 'animate-fade-in' },
+          React.createElement('div', { className: 'header' },
+            React.createElement('h1', { className: 'header-title' }, 'Chats'),
+            React.createElement('button', {
+              onClick: () => setSearchActive(!searchActive),
+              className: 'icon-btn'
+            },
+              React.createElement(SearchIcon, { className: 'nav-icon active' })
+            )
+          ),
+  
+          searchActive && React.createElement('div', { className: 'search-bar animate-slide-down' },
+            React.createElement('input', {
+              type: 'text',
+              placeholder: 'Search chats...',
+              className: 'search-input'
+            })
+          ),
+  
+          React.createElement('div', { className: 'chats-list' },
+            chats.length === 0 
+              ? React.createElement('div', { className: 'loading' }, 
+                  'No chats yet. Start messaging!'
+                )
+              : chats.map((chat, index) =>
+                  React.createElement('div', {
+                    key: chat.id,
+                    className: 'chat-item',
+                    style: {
+                      animation: `slide-in-left 0.4s ease-out ${index * 0.1}s both`
+                    }
+                  },
+                    React.createElement('img', {
+                      src: chat.avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${chat.username}`,
+                      alt: chat.username,
+                      className: 'chat-avatar'
+                    }),
+                    React.createElement('div', { className: 'chat-info' },
+                      React.createElement('div', { className: 'chat-header' },
+                        React.createElement('span', { className: 'chat-username' }, `@${chat.username}`),
+                        React.createElement('span', { className: 'chat-time' }, chat.time || 'Now')
+                      ),
+                      React.createElement('p', { className: 'chat-last-message' }, chat.lastMessage || 'Say hello!')
+                    ),
+                    chat.unread > 0 && React.createElement('div', {
+                      className: 'unread-badge animate-bounce-subtle'
+                    }, chat.unread)
+                  )
+                )
+          )
+        ),
+  
+        activeTab === 'settings' && user && React.createElement('div', { className: 'settings-container animate-fade-in' },
+          React.createElement('div', { className: 'profile-section' },
+            React.createElement('img', {
+              src: user.avatar,
+              alt: user.username,
+              className: 'profile-avatar'
+            }),
+            React.createElement('h2', { className: 'profile-name' }, `@${user.username}`)
+          ),
+  
+          React.createElement('div', { className: 'settings-section' },
+            React.createElement('h3', { className: 'section-title' }, 'Account'),
+            React.createElement('div', { className: 'settings-item' },
+              React.createElement('p', { className: 'settings-label' }, 'Email'),
+              React.createElement('p', { className: 'settings-value' }, user.email)
+            ),
+            React.createElement('div', { className: 'settings-item' },
+              React.createElement('p', { className: 'settings-label' }, 'Username'),
+              React.createElement('p', { className: 'settings-value' }, `@${user.username}`)
+            )
+          ),
+  
+          React.createElement('div', { className: 'settings-section' },
+            React.createElement('h3', { className: 'section-title' }, 'Settings'),
+            React.createElement('div', { className: 'settings-item' },
+              React.createElement('p', { className: 'settings-value' }, 'Chat Settings')
+            ),
+            React.createElement('div', { className: 'settings-item' },
+              React.createElement('p', { className: 'settings-value' }, 'Privacy')
+            ),
+            React.createElement('div', { className: 'settings-item' },
+              React.createElement('p', { className: 'settings-value' }, 'Security')
+            )
+          ),
+  
+          React.createElement('div', { className: 'settings-section' },
+            React.createElement('div', { 
+              className: 'settings-item',
+              onClick: () => {
+                setUser(null);
+                setCurrentScreen('login');
+                setLoginData({ username: '', password: '' });
+              },
+              style: { color: '#ef4444' }
+            },
+              React.createElement('p', { className: 'settings-value' }, 'Logout')
+            )
+          )
+        ),
+  
+        React.createElement('div', { className: 'bottom-nav' },
+          React.createElement('div', { className: 'nav-container' },
+            React.createElement('button', {
+              onClick: () => setActiveTab('chats'),
+              className: `nav-btn ${activeTab === 'chats' ? 'active' : ''}`
+            },
+              React.createElement(MessageCircleIcon, {
+                className: `nav-icon ${activeTab === 'chats' ? 'active' : 'inactive'}`
+              }),
+              React.createElement('span', {
+                className: `nav-label ${activeTab === 'chats' ? 'active' : 'inactive'}`
+              }, 'Chats')
+            ),
+            React.createElement('button', {
+              onClick: () => setActiveTab('settings'),
+              className: `nav-btn ${activeTab === 'settings' ? 'active' : ''}`
+            },
+              React.createElement(SettingsIcon, {
+                className: `nav-icon ${activeTab === 'settings' ? 'active' : 'inactive'}`
+              }),
+              React.createElement('span', {
+                className: `nav-label ${activeTab === 'settings' ? 'active' : 'inactive'}`
+              }, 'Settings')
+            )
+          )
+        )
+      );
+    }
+  
+    ReactDOM.render(React.createElement(ModernMessenger), document.getElementById('root'));
+  </script>
+</body>
+</html>    .input-field:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.02);
+    }
+    .input-field:hover {
+      transform: scale(1.02);
+    }
+    .input-field::placeholder {
+      color: #9ca3af;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 1rem;
+      background-color: #fff;
+      color: #000;
+      font-weight: 600;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 1rem;
+    }
+    .btn-primary:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      transform: scale(1.05);
+    }
+    .btn-primary:active {
+      transform: scale(0.95);
+    }
+    .btn-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .auth-switch {
+      text-align: center;
+      padding-top: 1rem;
+    }
+    .auth-switch-text {
+      color: #9ca3af;
+    }
+    .auth-switch-btn {
+      color: #fff;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .auth-switch-btn:hover {
+      text-decoration: underline;
+    }
     /* Demo Mode Notice */
     .demo-notice {
       margin: 1rem 0;
